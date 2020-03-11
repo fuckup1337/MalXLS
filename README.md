@@ -26,6 +26,7 @@ It is also not immediately obvious that the file contains a macro if it is saved
 - (Optional) Change the text color to ``WHITE`` and make sure the cells are the same size as regular cells
 - Activate cell ``A1`` so that it is not immediately obvious where the payload is when opening the file
 - (Optional) Insert some faux data at the beginning of the sheet
+- Remove identifying information from the file (File > Info > Check for Issues > Inspect Document)
 
 ### Prerequisites
 
@@ -38,6 +39,7 @@ If you are using Windows 10 with the May 2019 Update (1903) you are good to go, 
 The payload generator can be downloaded from the [Releases](https://github.com/davidcristian/MalXLS/releases) page. The source code is available in the ``Generate Payload`` directory.
 
 ```
+ComputePayload
 Usage: .\ComputePayload.exe [OPTION]... [FILE]... [-C]
   -e    Compress a file using GZip and encode it into a base64 string
   -f    Fix the bad characters in a file (use on one-liners)

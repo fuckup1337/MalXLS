@@ -38,7 +38,7 @@ If you are using Windows 10 with the May 2019 Update (1903) you are good to go, 
 The payload generator can be downloaded from the [Releases](https://github.com/davidcristian/MalXLS/releases) page. The source code is available in the ``Generate Payload`` directory.
 
 ```
-Usage: computepayload [OPTION]... [FILE]... [-C]
+Usage: .\ComputePayload.exe [OPTION]... [FILE]... [-C]
   -e    Compress a file using GZip and encode it into a base64 string
   -f    Fix the bad characters in a file (use on one-liners)
   -c    Copy the generated commands into the clipboard
@@ -88,7 +88,7 @@ Files belonging to other authors have their license in the same directory as the
 
 ## Acknowledgments
 
-* PowerShell decoding, decompression, execution, hide_window.ps1, and assure_32bit.ps1 snippets from MaMe82's [helper.js](https://github.com/RoganDawes/P4wnP1_aloa/blob/master/dist/HIDScripts/helper.js) file for [P4wnP1 A.L.O.A.
+* PowerShell decoding, decompression, execution, hide_window.ps1, and assure_32bit.ps1 snippets from MaMe82's [helper.js](https://github.com/RoganDawes/P4wnP1_aloa/blob/master/dist/HIDScripts/helper.js) file for the [P4wnP1 A.L.O.A.
 ](https://github.com/RoganDawes/P4wnP1_aloa)
 * PowerShell clear_history.ps1 script from [here](https://stackoverflow.com/a/38807689)
 * PowerShell reverse_shell.ps1 script from [here](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell) (second one)

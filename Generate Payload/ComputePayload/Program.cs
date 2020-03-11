@@ -167,7 +167,8 @@ namespace ComputePayload
         /// </summary>
         private static void PrintHelp()
         {
-            Console.WriteLine($"Usage: .\\{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name} [OPTION]... [FILE]... [-C]");
+            Console.WriteLine($"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}");
+            Console.WriteLine($@"Usage: .\{AppDomain.CurrentDomain.FriendlyName} [OPTION]... [FILE]... [-C]");
             Console.WriteLine("  -e    Compress a file using GZip and encode it into a base64 string");
             Console.WriteLine("  -f    Fix the bad characters in a file (use on one-liners)");
             Console.WriteLine("  -c    Copy the generated commands into the clipboard");

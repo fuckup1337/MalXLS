@@ -56,12 +56,9 @@ Example:
 
 #
 
-``Book1.xls`` breakdown:
-
-![](breakdown.png)
-
 <details>
-  <summary>Breakdown</summary>
+  <summary>Book1.xls breakdown</summary>    
+  <br /><img src="https://raw.githubusercontent.com/davidcristian/MalXLS/master/Excel%20File%20Examples/virus_scan.png" alt="A screenshot of the virus scan results from multiple engines" /><br /><p><a href="https://www.virustotal.com/gui/file/e5f25bb70bac14f8909fce9385a55557955b9bfa2a26d8be42ff5208f1488127/detection">Scan results</a></p><br /><img src="https://raw.githubusercontent.com/davidcristian/MalXLS/master/breakdown.png" alt="A screenshot of the commands (numbered) inside Book1.xls" />
   <p>
     
     1.  Disable all warnings and errors so that the macro never breaks

